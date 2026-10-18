@@ -5,12 +5,14 @@ class Dotheap < Formula
 
   on_macos do
     depends_on xcode: ["16.0", :build]
+    depends_on "rust" => :build
   end
 
   def install
     if OS.mac?
-      system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "dotheap"
-      bin.install ".build/release/dotheap"
+      system "cargo", "build", "--locked", "--release", "-p", "dotheap"
+      bin.install "target/release/dotheap"
+      doc.install "THIRD-PARTY-NOTICES.txt"
       system "scripts/make-app.sh", "--disable-sandbox"
       prefix.install "Dotheap.app"
     else
