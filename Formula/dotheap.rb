@@ -1,6 +1,7 @@
 class Dotheap < Formula
   desc "Memory analyzer for .NET process dumps: managed heap (Satori and CoreCLR GC) and native memory"
   homepage "https://github.com/neon-sunset/dotheap"
+  license "AGPL-3.0-only"
   head "https://github.com/neon-sunset/dotheap.git", branch: "main"
 
   on_macos do
@@ -12,7 +13,7 @@ class Dotheap < Formula
     if OS.mac?
       system "cargo", "build", "--locked", "--release", "-p", "dotheap"
       bin.install "target/release/dotheap"
-      doc.install "THIRD-PARTY-NOTICES.txt"
+      doc.install "LICENSE", "THIRD-PARTY-NOTICES.txt"
       system "scripts/make-app.sh", "--disable-sandbox"
       prefix.install "Dotheap.app"
     else
