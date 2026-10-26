@@ -1,6 +1,6 @@
 cask "dotheap" do
-  version "0.2.0"
-  sha256 "2fc9a8746d6e1eddcaf488530bf4c17b8296f7bd0671cdb9479c6dbcec8e2e35"
+  version "0.2.1"
+  sha256 "1439050856fcb2ceec3efd1016685584158f55cb7c99c20e1a3489fb61873af8"
 
   url "https://github.com/neon-sunset/dotheap/releases/download/v#{version}/dotheap-source.tar.gz"
   name "Dotheap"
