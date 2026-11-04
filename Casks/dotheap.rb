@@ -1,6 +1,6 @@
 cask "dotheap" do
-  version "0.2.5"
-  sha256 "caced1a45b1cd8afab563b58b6ea643db0db9c90bab71af547a0d1140b9df7a8"
+  version "0.2.6"
+  sha256 "a50e3fcd5981d2891c1ee48690cb5b0396e0a5983d4e7234bc9be2cab75899ec"
 
   url "https://github.com/neon-sunset/dotheap/releases/download/v#{version}/dotheap-macos-arm64-bundle.tar.gz"
   name "Dotheap"
